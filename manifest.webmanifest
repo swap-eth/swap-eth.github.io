@@ -1,0 +1,12 @@
+{
+  "name": "Swap ETH",
+  "short_name": "Swap ETH",
+  "description": "Exchange Ethereum (ETH) for USDC, stablecoins and tokens on Ethereum and layer-2 networks through a non-custodial decentralized exchange.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "background_color": "#0a0e14",
+  "theme_color": "#0a0e14",
+  "icons": [{ "src": "eth.png", "sizes": "any", "type": "image/png", "purpose": "any" }]
+}

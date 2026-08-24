@@ -1,0 +1,24 @@
+# Swap ETH — Ethereum Swap Reference
+
+> Exchange Ethereum (ETH) for USDC, stablecoins and tokens on Ethereum and layer-2 networks through a non-custodial decentralized exchange.
+
+## Key Facts
+- Asset: ETH — native asset of Ethereum and its layer-2 networks; pays gas
+- Networks: Ethereum mainnet and L2s (Arbitrum, Base, Optimism, zkSync)
+- Custody: non-custodial — swaps settle through public smart contracts; wallet signs
+- Approvals: buying a token with native ETH needs no approval; selling an ERC-20 for ETH needs a one-time approval
+- Costs: DEX pool fee + network gas (ETH) + price impact; mainnet gas higher than L2
+- Common route: ETH -> USDC / stablecoins / tokens
+
+## Internal Sections & App Navigation
+- [What is Swap ETH?](#what)
+- [How ETH swaps work](#how)
+- [Gas & approvals](#approvals)
+- [Networks & layer 2s](#networks)
+- [Fees, gas & price impact](#fees)
+- [Is it safe?](#safety)
+- [FAQ](#faq)
+- [Open Swap ETH App](dashboard/index.html)
+
+## Disclaimer
+Independent page. Not affiliated with the Ethereum Foundation. Not financial advice.

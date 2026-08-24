@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swap-eth.github.io/sitemap.xml
