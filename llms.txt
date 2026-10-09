@@ -1,24 +1,23 @@
-# Swap ETH — Ethereum Swap Reference
+# Swap ETH
 
-> Exchange Ethereum (ETH) for USDC, stablecoins and tokens on Ethereum and layer-2 networks through a non-custodial decentralized exchange.
+> Swap ETH for USDC, USDT and other tokens. Compare receive amounts, route fees, slippage and gas budgets before continuing to the swap dashboard.
 
-## Key Facts
-- Asset: ETH — native asset of Ethereum and its layer-2 networks; pays gas
-- Networks: Ethereum mainnet and L2s (Arbitrum, Base, Optimism, zkSync)
-- Custody: non-custodial — swaps settle through public smart contracts; wallet signs
-- Approvals: buying a token with native ETH needs no approval; selling an ERC-20 for ETH needs a one-time approval
-- Costs: DEX pool fee + network gas (ETH) + price impact; mainnet gas higher than L2
-- Common route: ETH -> USDC / stablecoins / tokens
+## Pages
+- [Swap ETH](https://insert_url/): ETH swap calculator, rate and fee comparison, token choices, wallet steps and FAQ.
+- [Swap dashboard](https://insert_url/dashboard/): continue to the swap dashboard.
 
-## Internal Sections & App Navigation
-- [What is Swap ETH?](#what)
-- [How ETH swaps work](#how)
-- [Gas & approvals](#approvals)
-- [Networks & layer 2s](#networks)
-- [Fees, gas & price impact](#fees)
-- [Is it safe?](#safety)
-- [FAQ](#faq)
-- [Open Swap ETH App](dashboard/index.html)
+## Calculator
+Enter the ETH amount, exchange rate, route fee, slippage tolerance and gas budget. The receive amount is ETH multiplied by the entered rate, less the route fee. Minimum received applies slippage to that amount. Gas is added to the ETH budget separately. The table compares 0.1, 0.5, 1, 5 and 10 ETH using the same settings.
 
-## Disclaimer
-Independent page. Not affiliated with the Ethereum Foundation. Not financial advice.
+## Token and network choices
+USDC and USDT are dollar-denominated stablecoins. ARB is the Arbitrum token. Native BNB uses BNB Chain and native SOL uses Solana. Select the receiving network as well as the token.
+
+## FAQ
+- **How do I swap ETH for USDC?** Choose ETH as the token to pay and USDC as the token to receive. Select the receiving network, enter your amount, review the route and minimum received, then confirm the transaction in your wallet. Keep ETH available for the network fee.
+- **What fees do I pay when I swap ETH?** The total cost includes the route or liquidity-pool fee and the network gas fee. A route with several pools can charge a fee at each step. Price impact changes the exchange rate; slippage sets how much the execution price may move. Compare the final receive amount as well as the fee percentage.
+- **How long does an ETH swap take?** A same-network swap completes after its transaction is included in a block. Ethereum has 12-second slots, while transaction inclusion depends on demand and the priority fee. Cross-chain swaps also require source-chain confirmations and destination-chain settlement.
+- **What is the difference between slippage and price impact?** Price impact is the change your own trade causes in a liquidity pool. Slippage is the price movement between the quote and execution. At 0.5% slippage, a quoted receive amount of 2,991 USDC has a minimum received of 2,976.045 USDC. Network gas is paid separately.
+- **Can I swap ETH for USDT, ARB, BNB or SOL?** Choose USDT for another dollar-denominated stablecoin, or select a token and its receiving network. ARB is a token, while Arbitrum is a network that also uses ETH for gas. Native BNB and SOL use BNB Chain and Solana, so an Ethereum-to-native-token route includes a cross-chain transfer.
+- **Do I need ETH left over for gas?** Yes. On Ethereum, network fees are paid in ETH. Leave enough ETH for the swap transaction and any other wallet transactions you intend to make. The calculator shows the swap amount plus your gas budget as the total ETH needed.
+- **Does swapping ETH require a token approval?** Paying with native ETH generally uses the swap transaction directly. Paying with WETH or another ERC-20 token may require an allowance or a permit for the swap contract. Review the spender and allowance amount before signing.
+- **How is the ETH swap calculator calculated?** The calculator multiplies your ETH amount by the exchange rate you enter, then applies the route fee. Minimum received applies your slippage tolerance to that result. Gas is added to the ETH budget separately. The comparison table uses the same rate, fee and slippage settings for every swap size.

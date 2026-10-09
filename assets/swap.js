@@ -1,0 +1,33 @@
+const $=id=>document.getElementById(id);
+const controls=['amt','rate','fee','slippage','gas'];
+const rates={usdc:3000,usdt:3000};
+let currentToken='usdc';
+const fmt=(value,places=2)=>new Intl.NumberFormat('en-US',{minimumFractionDigits:places,maximumFractionDigits:places}).format(value);
+const eth=value=>new Intl.NumberFormat('en-US',{maximumFractionDigits:8}).format(value);
+function calculate(){
+ const values=controls.map(id=>{const raw=$(id).value.trim();return raw===''?NaN:Number(raw)});
+ const [amount,rate,fee,slippage,gas]=values;
+ const valid=Number.isFinite(amount)&&amount>0&&amount<=1000000&&Number.isFinite(rate)&&rate>0&&rate<=1000000000&&Number.isFinite(fee)&&fee>=0&&fee<100&&Number.isFinite(slippage)&&slippage>=0&&slippage<=50&&Number.isFinite(gas)&&gas>=0&&gas<=10;
+ const tests=[amount>0&&amount<=1000000,rate>0&&rate<=1000000000,fee>=0&&fee<100,slippage>=0&&slippage<=50,gas>=0&&gas<=10];
+ controls.forEach((id,i)=>$(id).setAttribute('aria-invalid',String(!Number.isFinite(values[i])||!tests[i])));
+ $('input-error').textContent=valid?'':'Enter a positive ETH amount and rate, slippage from 0% to 50%, and a gas budget from 0 to 10 ETH.';
+ document.querySelectorAll('[data-currency]').forEach(el=>el.textContent=currentToken.toUpperCase());
+ $('receive-icon').src='assets/tokens/'+currentToken+'.svg';
+ $('recv').textContent=valid?fmt(amount*rate*(1-fee/100)):'—';
+ const symbol=currentToken.toUpperCase();
+ $('route-fee').textContent=valid?fmt(amount*rate*fee/100)+' '+symbol:'—';
+ $('min-received').textContent=valid?fmt(amount*rate*(1-fee/100)*(1-slippage/100),3)+' '+symbol:'—';
+ $('gas-value').textContent=valid?eth(gas)+' ETH':'—';
+ $('total-eth').textContent=valid?eth(amount+gas)+' ETH':'—';
+ $('fee-percent').textContent=Number.isFinite(fee)?'('+fmt(fee)+'%)':'';
+ $('slippage-label').textContent=Number.isFinite(slippage)?'('+eth(slippage)+'%)':'';
+ $('table-fee').textContent=Number.isFinite(fee)?fmt(fee)+'%':'—';
+ $('table-rate').textContent=valid?fmt(rate):'—';
+ $('table-gas').textContent=valid?eth(gas)+' ETH':'—';
+ document.querySelectorAll('tbody tr').forEach(row=>{const size=Number(row.dataset.amount),gross=size*rate,cost=gross*fee/100,net=gross-cost;row.classList.toggle('c602855',valid&&size===amount);for(const [name,value,places] of [['gross',gross,2],['fee',cost,2],['net',net,2],['minimum',net*(1-slippage/100),3]])row.querySelector('.'+name).textContent=valid?fmt(value,places):'—'});
+ if(valid)rates[currentToken]=rate;
+}
+controls.forEach(id=>$(id).addEventListener('input',calculate));
+$('to').addEventListener('change',()=>{currentToken=$('to').value;$('rate').value=rates[currentToken];calculate()});
+document.querySelectorAll('a[href="dashboard/"]').forEach(link=>link.addEventListener('click',()=>{if(controls.every(id=>$(id).getAttribute('aria-invalid')==='false')){try{sessionStorage.setItem('ethSwapQuote',JSON.stringify({from:'eth',to:currentToken,amount:Number($('amt').value),rate:Number($('rate').value),feePercent:Number($('fee').value),slippagePercent:Number($('slippage').value),gasBudgetETH:Number($('gas').value)}))}catch{}}}));
+calculate();
