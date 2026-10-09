@@ -24,7 +24,7 @@ function calculate(){
  $('table-fee').textContent=Number.isFinite(fee)?fmt(fee)+'%':'—';
  $('table-rate').textContent=valid?fmt(rate):'—';
  $('table-gas').textContent=valid?eth(gas)+' ETH':'—';
- document.querySelectorAll('tbody tr').forEach(row=>{const size=Number(row.dataset.amount),gross=size*rate,cost=gross*fee/100,net=gross-cost;row.classList.toggle('c602855',valid&&size===amount);for(const [name,value,places] of [['gross',gross,2],['fee',cost,2],['net',net,2],['minimum',net*(1-slippage/100),3]])row.querySelector('.'+name).textContent=valid?fmt(value,places):'—'});
+ document.querySelectorAll('tbody tr').forEach(row=>{const size=Number(row.dataset.amount),gross=size*rate,cost=gross*fee/100,net=gross-cost;row.classList.toggle('c7b822b',valid&&size===amount);for(const [name,value,places] of [['gross',gross,2],['fee',cost,2],['net',net,2],['minimum',net*(1-slippage/100),3]])row.querySelector('.'+name).textContent=valid?fmt(value,places):'—'});
  if(valid)rates[currentToken]=rate;
 }
 controls.forEach(id=>$(id).addEventListener('input',calculate));
