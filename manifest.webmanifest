@@ -1,0 +1,1 @@
+{"name":"ETH Swap","short_name":"ETH Swap","description":"ETH Swap lets you swap ETH for USDC, USDT or any ERC-20 token on Ethereum. Connect your own wallet, review the DEX quote and sign — non-custodial, no account.","start_url":"/","display":"standalone","background_color":"#f6f5f4","theme_color":"#f6f5f4","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}

@@ -1,88 +1,285 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swap ETH | Compare USDC Rates, Fees &amp; Minimum Received</title>
-<meta name="description" content="Swap ETH for USDC, USDT and other tokens. Calculate your receive amount, compare swap sizes, and check route fees, gas and slippage before you confirm.">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ETH Swap — Swap ETH for USDC, USDT and ERC-20</title>
+<meta name="description" content="ETH Swap lets you swap ETH for USDC, USDT or any ERC-20 token on Ethereum. Connect your own wallet, review the DEX quote and sign — non-custodial, no account.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#f6f5f4">
 <link rel="canonical" href="https://swap-eth.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Swap ETH">
-<meta property="og:title" content="Swap ETH | Compare USDC Rates, Fees &amp; Minimum Received">
-<meta property="og:description" content="Swap ETH for USDC, USDT and other tokens. Calculate your receive amount, compare swap sizes, and check route fees, gas and slippage before you confirm.">
-<meta property="og:url" content="https://swap-eth.github.io/">
-<meta property="og:image" content="https://swap-eth.github.io/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Swap ETH for USDC and other tokens with a rate and fee calculator">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:url" content="https://swap-eth.github.io/">
-<meta name="twitter:image:alt" content="Swap ETH calculator with USDC conversion and fee breakdown">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Swap ETH | Compare USDC Rates, Fees &amp; Minimum Received">
-<meta name="twitter:description" content="Swap ETH for USDC, USDT and other tokens. Calculate your receive amount, compare swap sizes, and check route fees, gas and slippage before you confirm.">
-<meta name="twitter:image" content="https://swap-eth.github.io/og.png">
-<meta name="theme-color" content="#4F46E5">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://swap-eth.github.io/#website", "url": "https://swap-eth.github.io/", "name": "Swap ETH", "inLanguage": "en"}, {"@type": "WebPage", "datePublished": "2026-10-09", "dateModified": "2026-10-09", "@id": "https://swap-eth.github.io/#webpage", "url": "https://swap-eth.github.io/", "name": "Swap ETH | Compare USDC Rates, Fees & Minimum Received", "description": "Swap ETH for USDC, USDT and other tokens. Calculate your receive amount, compare swap sizes, and check route fees, gas and slippage before you confirm.", "isPartOf": {"@id": "https://swap-eth.github.io/#website"}, "about": {"@id": "https://swap-eth.github.io/#app"}, "breadcrumb": {"@id": "https://swap-eth.github.io/#breadcrumb"}, "mainEntity": {"@id": "https://swap-eth.github.io/#faq"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://swap-eth.github.io/og.png", "width": 1200, "height": 630}, "inLanguage": "en"}, {"@type": "SoftwareApplication", "@id": "https://swap-eth.github.io/#app", "url": "https://swap-eth.github.io/", "name": "Swap ETH calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "description": "Calculate ETH-to-token conversion, route fees, minimum received and the total ETH budget using editable rate and fee settings.", "featureList": ["ETH to USDC and USDT calculation", "Editable exchange rate and route fee", "Slippage and minimum received", "Swap-size and fee comparison"], "image": "https://swap-eth.github.io/og.png"}, {"@type": "BreadcrumbList", "@id": "https://swap-eth.github.io/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swap-eth.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Token swaps", "item": "https://swap-eth.github.io/dashboard/"}, {"@type": "ListItem", "position": 3, "name": "Swap ETH", "item": "https://swap-eth.github.io/"}]}, {"@type": "FAQPage", "@id": "https://swap-eth.github.io/#faq", "isPartOf": {"@id": "https://swap-eth.github.io/#webpage"}, "mainEntity": [{"@type": "Question", "name": "How do I swap ETH for USDC?", "acceptedAnswer": {"@type": "Answer", "text": "Choose ETH as the token to pay and USDC as the token to receive. Select the receiving network, enter your amount, review the route and minimum received, then confirm the transaction in your wallet. Keep ETH available for the network fee."}}, {"@type": "Question", "name": "What fees do I pay when I swap ETH?", "acceptedAnswer": {"@type": "Answer", "text": "The total cost includes the route or liquidity-pool fee and the network gas fee. A route with several pools can charge a fee at each step. Price impact changes the exchange rate; slippage sets how much the execution price may move. Compare the final receive amount as well as the fee percentage."}}, {"@type": "Question", "name": "How long does an ETH swap take?", "acceptedAnswer": {"@type": "Answer", "text": "A same-network swap completes after its transaction is included in a block. Ethereum has 12-second slots, while transaction inclusion depends on demand and the priority fee. Cross-chain swaps also require source-chain confirmations and destination-chain settlement."}}, {"@type": "Question", "name": "What is the difference between slippage and price impact?", "acceptedAnswer": {"@type": "Answer", "text": "Price impact is the change your own trade causes in a liquidity pool. Slippage is the price movement between the quote and execution. At 0.5% slippage, a quoted receive amount of 2,991 USDC has a minimum received of 2,976.045 USDC. Network gas is paid separately."}}, {"@type": "Question", "name": "Can I swap ETH for USDT, ARB, BNB or SOL?", "acceptedAnswer": {"@type": "Answer", "text": "Choose USDT for another dollar-denominated stablecoin, or select a token and its receiving network. ARB is a token, while Arbitrum is a network that also uses ETH for gas. Native BNB and SOL use BNB Chain and Solana, so an Ethereum-to-native-token route includes a cross-chain transfer."}}, {"@type": "Question", "name": "Do I need ETH left over for gas?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. On Ethereum, network fees are paid in ETH. Leave enough ETH for the swap transaction and any other wallet transactions you intend to make. The calculator shows the swap amount plus your gas budget as the total ETH needed."}}, {"@type": "Question", "name": "Does swapping ETH require a token approval?", "acceptedAnswer": {"@type": "Answer", "text": "Paying with native ETH generally uses the swap transaction directly. Paying with WETH or another ERC-20 token may require an allowance or a permit for the swap contract. Review the spender and allowance amount before signing."}}, {"@type": "Question", "name": "How is the ETH swap calculator calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator multiplies your ETH amount by the exchange rate you enter, then applies the route fee. Minimum received applies your slippage tolerance to that result. Gas is added to the ETH budget separately. The comparison table uses the same rate, fee and slippage settings for every swap size."}}]}]}</script>
+<meta property="og:type" content="website"><meta property="og:site_name" content="ETH Swap"><meta property="og:title" content="ETH Swap — Swap ETH for USDC, USDT and ERC-20"><meta property="og:description" content="ETH Swap lets you swap ETH for USDC, USDT or any ERC-20 token on Ethereum. Connect your own wallet, review the DEX quote and sign — non-custodial, no account."><meta property="og:url" content="https://swap-eth.github.io/"><meta property="og:image" content="https://swap-eth.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ETH Swap — Swap ETH for USDC, USDT and ERC-20"><meta name="twitter:description" content="ETH Swap lets you swap ETH for USDC, USDT or any ERC-20 token on Ethereum. Connect your own wallet, review the DEX quote and sign — non-custodial, no account."><meta name="twitter:image" content="https://swap-eth.github.io/og-image.png">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://swap-eth.github.io/#organization","name":"ETH Swap","url":"https://swap-eth.github.io/","description":"ETH Swap lets you swap ETH for USDC, USDT or any ERC-20 token on Ethereum. Connect your own wallet, review the DEX quote and sign — non-custodial, no account.","logo":{"@type":"ImageObject","@id":"https://swap-eth.github.io/#logo","url":"https://swap-eth.github.io/icon.svg","caption":"ETH Swap"}},{"@type":"WebSite","@id":"https://swap-eth.github.io/#website","url":"https://swap-eth.github.io/","publisher":{"@id":"https://swap-eth.github.io/#organization"},"name":"ETH Swap"},{"@type":"WebPage","@id":"https://swap-eth.github.io/#webpage","url":"https://swap-eth.github.io/","publisher":{"@id":"https://swap-eth.github.io/#organization"},"name":"ETH Swap — Swap ETH for USDC, USDT and ERC-20","isPartOf":{"@id":"https://swap-eth.github.io/#website"},"mainEntity":{"@id":"https://swap-eth.github.io/#app"},"breadcrumb":{"@id":"https://swap-eth.github.io/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://swap-eth.github.io/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://swap-eth.github.io/"},{"@type":"ListItem","position":2,"name":"ETH Swap","item":"https://swap-eth.github.io/"}]},{"@type":"WebApplication","@id":"https://swap-eth.github.io/#app","url":"https://swap-eth.github.io/","publisher":{"@id":"https://swap-eth.github.io/#organization"},"name":"ETH Swap","applicationCategory":"FinanceApplication","operatingSystem":"Web","description":"ETH Swap lets you swap ETH for USDC, USDT or any ERC-20 token on Ethereum. Connect your own wallet, review the DEX quote and sign — non-custodial, no account.","isPartOf":{"@id":"https://swap-eth.github.io/#website"}},{"@type":"FAQPage","@id":"https://swap-eth.github.io/#faq","isPartOf":{"@id":"https://swap-eth.github.io/#webpage"},"about":{"@id":"https://swap-eth.github.io/#app"},"name":"ETH Swap FAQ","mainEntity":[{"@type":"Question","name":"What is ETH Swap used for?","acceptedAnswer":{"@type":"Answer","text":"ETH Swap is for exchanging ETH for USDC, USDT or any ERC-20 token on Ethereum, and for swapping those tokens back into ETH. You connect your own wallet, check a DEX-routed quote and sign the transaction yourself."}},{"@type":"Question","name":"Do I need ETH to swap USDC or USDT?","acceptedAnswer":{"@type":"Answer","text":"Yes. Gas on Ethereum is paid in ETH no matter which token you are selling. Keep some ETH in the wallet so you can sign the approval and the swap."}},{"@type":"Question","name":"Why does an ERC-20 swap ask for an approval?","acceptedAnswer":{"@type":"Answer","text":"ERC-20 tokens need a one-time allowance before a router can move them for you. Native ETH needs no approval. The approval is its own transaction and costs gas."}},{"@type":"Question","name":"What is slippage when swapping ETH?","acceptedAnswer":{"@type":"Answer","text":"Slippage is the difference between the quoted price and the price your swap executes at. If the price moves more than your tolerance before the transaction confirms, the swap reverts and you pay gas for the failed attempt."}},{"@type":"Question","name":"Why does the gas fee change between swaps?","acceptedAnswer":{"@type":"Answer","text":"Gas on Ethereum depends on how busy the network is when your transaction is sent. The wallet shows an estimate before you sign, and it can be higher for multi-step routes than for a simple one."}},{"@type":"Question","name":"Does the site hold my ETH during a swap?","acceptedAnswer":{"@type":"Answer","text":"No. The swap runs from your wallet through on-chain contracts, and the interface never holds your funds or private keys. You can reject any request in your wallet."}}]}]}
+</script>
 <style>
-#swap-breadcrumb{padding-top:18px;font-size:12px;color:var(--mute)}
-#swap-breadcrumb p{display:flex;flex-wrap:wrap;gap:8px}
-#swap-answer{margin-bottom:16px}
-#swap-facts{padding-bottom:32px}
-#swap-facts h2{font-size:24px;letter-spacing:-.7px;margin-bottom:14px}
-#swap-facts .ce32360{margin-top:0}
-#swap-facts table{min-width:0}
-#swap-facts th,#swap-facts td{text-align:left;padding:12px 18px;font-size:13px;vertical-align:top}
-#swap-facts th{width:25%;font-weight:600;color:var(--text)}
-#swap-facts td{color:var(--mute)}
-#swap-facts tr:last-child>*{border-bottom:0}
-#swap-facts a{color:var(--accent)}
-@media(max-width:480px){#swap-facts th,#swap-facts td{padding:10px;font-size:12px}#swap-facts th{width:32%}}
+@font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Space Grotesk';src:url('assets/space-grotesk.woff2') format('woff2');font-weight:500 700;font-display:swap}
+:root{
+ --bg:#f6f5f4;--card:#fff;--ink:#17181c;--muted:#737b88;--faint:#aeb4bf;
+ --line:#ecebe9;--line-2:#e3e1de;--panel:#f8f7f6;--panel-2:#efedeb;
+ --accent:#627eea;--accent-hover:#566fce;--accent-ink:#4a5eb0;--accent-soft:#e9edfc;--accent-on:#ffffff;--promo:#eff2fd;--text-2:#4b5563;
+ --shadow:0 1px 2px rgba(13,17,28,.04),0 24px 56px -40px rgba(13,17,28,.24);--pico-bg:#fff;--pico-ring:rgba(13,17,28,.06);
+ --ease:cubic-bezier(.2,.7,.2,1);
+ --head:"Space Grotesk","Arial",sans-serif;--body:"Inter","Arial",sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;color:var(--ink);font:15px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;background:var(--bg)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:none;-webkit-mask-image:linear-gradient(#000 0,rgba(0,0,0,.35) 60%,transparent 100%);mask-image:linear-gradient(#000 0,rgba(0,0,0,.35) 60%,transparent 100%)}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;background:none;border:0;color:inherit}
+img{display:block;max-width:100%}
+h1,h2,h3{margin:0;font-family:var(--head);font-weight:500;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+
+.nav{display:flex;align-items:center;gap:24px;padding:16px 24px;max-width:1280px;margin:0 auto;width:100%}
+.brand{display:inline-flex;align-items:center;gap:8px;font-family:var(--head);font-weight:500;font-size:20px;letter-spacing:-.02em;color:var(--ink);white-space:nowrap;flex:0 0 auto}
+.brand img{width:28px;height:28px}
+.nlinks{display:flex;align-items:center;gap:20px}
+.nlinks a{font-size:14px;font-weight:500;color:var(--muted);white-space:nowrap;transition:color .16s var(--ease)}
+.nlinks a:hover{color:var(--ink)}
+.spacer{flex:1}
+main{flex:1}
+.chain{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 12px;border-radius:10px;background:var(--panel-2);font-weight:500;font-size:14px;color:var(--ink);transition:background-color .16s var(--ease);flex:0 0 auto;white-space:nowrap}
+.chain img{width:20px;height:20px;border-radius:50%}
+.chain:hover{background:var(--line-2)}
+.chain .cv{width:12px;height:12px;color:var(--muted)}
+.connect{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:10px;background:var(--card);border:1px solid var(--line-2);color:var(--ink);font-weight:500;font-size:14px;transition:background-color .16s var(--ease),border-color .16s var(--ease);flex:0 0 auto;white-space:nowrap}
+.connect:hover{border-color:var(--faint);background:var(--panel)}
+
+.hero{display:flex;flex-direction:column;align-items:center;padding:32px 20px 48px}
+h1{font-size:clamp(36px,4.6vw,48px);line-height:1.08;letter-spacing:-.025em;text-align:center;color:var(--ink);margin:0 0 32px}
+
+.card{width:min(600px,100%);background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.tabs{display:flex;align-items:center;gap:4px;padding:20px 20px 16px}
+.tab{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:10px;font-weight:500;font-size:14px;color:var(--muted);transition:background-color .16s var(--ease),color .16s var(--ease)}
+.tab:hover{background:var(--panel-2);color:var(--ink)}
+.tab.on{background:var(--accent-soft);color:var(--accent-ink)}
+.tabs .sp{flex:1}
+.tabs .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--muted);transition:background-color .16s var(--ease),color .16s var(--ease)}
+.tabs .ic:hover{background:var(--panel-2);color:var(--ink)}
+.tabs .ic svg{width:18px;height:18px}
+
+.promo{margin:0 20px;padding:32px;border-radius:12px;background:var(--promo);display:flex;align-items:center;gap:20px}
+.promo-txt{flex:1;min-width:0}
+.promo-h{font-family:var(--head);font-weight:500;font-size:clamp(22px,3.4vw,28px);line-height:1.2;letter-spacing:-.015em;color:var(--ink);margin:0 0 8px;text-wrap:balance}
+.promo-sub{font-size:15px;line-height:1.6;color:var(--text-2);margin:0;max-width:34ch}
+.promo-grid{flex:0 0 auto;display:grid;grid-template-columns:repeat(2,auto);gap:16px}
+.pico{width:52px;height:52px;border-radius:50%;background:var(--pico-bg);box-shadow:0 0 0 1px var(--pico-ring);display:grid;place-items:center;overflow:hidden}
+.pico img{width:100%;height:100%;object-fit:contain;display:block}
+.promo-flow{flex-direction:column;align-items:stretch;gap:24px}
+.promo-flow .promo-sub{max-width:44ch}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.flow li{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
+.flow li+li::before{content:"";position:absolute;top:22px;right:calc(50% + 30px);width:calc(100% - 52px);height:1px;background:var(--line-2)}
+.fi{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:var(--pico-bg);box-shadow:0 0 0 1px var(--pico-ring);color:var(--accent-ink)}
+.fi img{width:100%;height:100%;display:block}
+.fi svg{width:20px;height:20px}
+.fi.on{background:var(--accent);color:var(--accent-on);box-shadow:none}
+.flow b{margin-top:4px;font-weight:500;font-size:14px;color:var(--ink)}
+.flow small{font-size:13px;line-height:1.4;color:var(--muted)}
+.cta-wrap{padding:20px}
+.cta{width:100%;height:60px;border-radius:12px;background:var(--accent);color:var(--accent-on);font-weight:500;font-size:16px;transition:background-color .16s var(--ease),transform .12s var(--ease)}
+.cta:hover{background:var(--accent-hover)}
+.cta:active{transform:scale(.99)}
+@media(max-width:470px){.promo{flex-direction:column;align-items:flex-start}.promo-grid{grid-template-columns:repeat(4,auto)}.promo-sub{max-width:none}}
+
+.learn{max-width:720px;margin:48px auto 0;width:100%;padding:0 24px 72px}
+.learn-h{font-size:14px;font-weight:500;color:var(--muted);text-align:center;margin:0 0 12px}
+.lrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:flex-start}
+.lcard{flex:0 0 auto;background:transparent;border:1px solid var(--line-2);border-radius:10px;transition:background-color .16s var(--ease),border-color .16s var(--ease)}
+.lcard>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;font-weight:500;font-size:14px;color:var(--text-2)}
+.lcard>summary::-webkit-details-marker{display:none}
+.lcard:hover{border-color:var(--faint);background:var(--card)}.lcard:hover>summary{color:var(--ink)}
+.lcard .chev{width:6px;height:6px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);margin-top:-4px;flex-shrink:0;transition:transform .16s var(--ease)}
+.lcard[open]{order:9;flex:0 0 100%;min-width:0;background:var(--card);border-color:var(--line-2);border-radius:16px;margin-top:8px}
+.lcard[open]>summary{height:auto;padding:20px 24px 0;color:var(--muted);font-size:13px}
+.lcard[open] .chev{transform:rotate(225deg);margin-top:4px}
+.lbody{padding:4px 24px 24px;max-width:660px}
+.lbody h2{font-size:22px;line-height:1.3;color:var(--ink);margin:8px 0 4px}
+.lbody h3{font-size:15px;line-height:1.4;color:var(--ink);margin:20px 0 4px}
+.lbody p{margin:0;font-size:15px;line-height:1.7;color:var(--text-2)}
+.lbody p+p{margin-top:8px}
+.lbody ul,.lbody ol{margin:8px 0 0;padding-left:20px}
+.lbody li{font-size:15px;line-height:1.7;color:var(--text-2);margin-bottom:4px}
+.lbody a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.lbody strong,.lbody b{color:var(--ink);font-weight:500}
+.lbody .tbl{overflow-x:auto;margin:16px 0 4px}
+.lbody table{width:100%;min-width:420px;border-collapse:collapse;font-size:14px}
+.lbody caption{text-align:left;color:var(--muted);font-size:13px;margin-bottom:8px}
+.lbody th,.lbody td{text-align:left;padding:8px 12px;border:1px solid var(--line-2);vertical-align:top;line-height:1.45}
+.lbody thead th{background:var(--panel);color:var(--ink);font-weight:500}
+.lbody tbody th{background:var(--panel);color:var(--muted);white-space:nowrap;font-weight:500}
+.lbody td{color:var(--text-2)}
+.lfaq h3{margin-top:16px;font-size:16px}
+
+footer{border-top:1px solid var(--line-2);background:var(--card)}
+.foot{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:20px 24px 24px;color:var(--muted);font-size:13px}
+.foot a{color:var(--muted);transition:color .16s var(--ease)}.foot a:hover{color:var(--ink)}.foot .sep{color:var(--faint)}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,8px);background:var(--ink);color:var(--bg);border-radius:12px;padding:12px 16px;font-size:13px;box-shadow:0 16px 40px -16px rgba(13,17,28,.5);z-index:60;opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease),visibility .2s;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+@media(max-width:1120px){.nlinks{display:none}}
+@media(max-width:720px){.chain span{display:none}.chain{padding:0 8px;gap:4px}}
+@media(max-width:560px){
+  .nav{padding:12px 16px;gap:8px}
+  .brand{font-size:16px}
+  .brand img{width:24px;height:24px}
+  .chain{height:36px;padding:0 8px;gap:4px}
+  .chain span{display:none}
+  .connect{height:36px;padding:0 12px;font-size:13px}
+  .hero{padding:24px 16px 40px}
+  .tabs{padding:16px 16px 12px}.promo{margin:0 16px;padding:24px}.cta-wrap{padding:16px}.cta{height:56px}
+  .learn{margin-top:40px;padding:0 16px 56px}
+}
 </style>
+<link rel="prerender" href="/dashboard/">
+<link rel="prefetch" href="/dashboard/" as="document">
+<link rel="preload" href="/dashboard/" as="document">
 </head>
 <body>
-<a class="cc5ecd8" href="#main">Skip to content</a>
-<header class="ceb875e"><div class="cbe1420"><span class="c82129e">Swap ETH</span><nav aria-label="Primary"><a href="#rates">Rates &amp; fees</a><a href="#how">How it works</a><a href="#safety">Safety</a><a href="#faq">FAQ</a></nav><a class="c9be06a c102352" href="dashboard/">Open app <span class="c2370e1" aria-hidden="true">&#8599;</span></a></div></header>
-<main id="main">
-<nav id="swap-breadcrumb" class="cbe1420" aria-label="Breadcrumb"><p><a href="/">Home</a><span aria-hidden="true">/</span><a href="dashboard/">Token swaps</a><span aria-hidden="true">/</span><span aria-current="page">Swap ETH</span></p></nav>
-<section class="caa8953 c9c308a" aria-labelledby="hero-title"><div class="cbe1420">
-<div class="c6ae307"><h1 id="hero-title">Swap ETH<br>for <span>USDC</span><br>&amp; more.</h1><p id="swap-answer" class="ce08ec4">To swap ETH, exchange Ether for USDC, USDT or another token through a wallet-connected swap route. Select the network and token, enter your ETH amount, compare fees and minimum received, then confirm in your wallet. Keep additional ETH available to pay the Ethereum network gas fee.</p><p class="ce08ec4"><strong>Swap ETH for USDC, USDT and other tokens</strong> with the rate, route fee and minimum received in view. Choose your amount, check the details and continue to your swap.</p><div class="cb9b384"><a class="c9be06a" href="dashboard/">Swap ETH <span class="c2370e1" aria-hidden="true">&#8599;</span></a><a class="cff3a4b" href="#rates">Compare rates &amp; fees</a></div><div class="c2d5deb"><div class="c7bd7f5"><img src="assets/tokens/eth.svg" width="28" height="28" alt="Ethereum"><img src="assets/tokens/usdc.svg" width="28" height="28" alt="USDC"><img src="assets/tokens/usdt.svg" width="28" height="28" alt="USDT"></div><span>USDC, USDT &amp; token pairs</span></div></div>
-<div class="cb5ed0e"><article class="c06c8d8" id="quote" aria-labelledby="quote-title"><a class="cec46cd" href="dashboard/" aria-label="Open the ETH swap dashboard"></a>
-<div class="c4b650d"><h2 id="quote-title">ETH swap quote</h2><span class="c6bb23e">Instant calculation</span></div>
-<div class="c2e4f41"><div class="ce26365"><label class="c5372c8" for="amt">You pay</label><input class="cc6853c" id="amt" type="text" inputmode="decimal" value="1" autocomplete="off" aria-describedby="input-error"><span class="cb824f6">On Ethereum</span></div><div class="cd7edc9"><img src="assets/tokens/eth.svg" width="28" height="28" alt=""><span>ETH</span></div></div>
-<div class="cc2f6f4" aria-hidden="true">&#8595;</div>
-<div class="c2e4f41"><div class="ce26365"><label class="c5372c8" for="recv">You receive</label><output id="recv" for="amt rate fee slippage">2,991.00</output><span class="cb824f6">After route fee</span></div><div class="cd7edc9"><img id="receive-icon" src="assets/tokens/usdc.svg" width="28" height="28" alt=""><select id="to" aria-label="Receive token"><option value="usdc">USDC</option><option value="usdt">USDT</option></select></div></div>
-<div class="c5b0efc"><label for="rate">Rate input &middot; 1 ETH =</label><input id="rate" type="number" min="0.000001" max="1000000000" step="any" value="3000" aria-describedby="input-error"><span data-currency>USDC</span></div>
-<dl aria-live="polite" aria-atomic="true"><div><dt>Route fee <span id="fee-percent">(0.30%)</span></dt><dd id="route-fee">9.00 USDC</dd></div><div><dt>Minimum received <span id="slippage-label">(0.5%)</span></dt><dd id="min-received">2,976.045 USDC</dd></div><div><dt>Gas budget</dt><dd id="gas-value">0.00015 ETH</dd></div><div><dt>Total ETH needed</dt><dd id="total-eth">1.00015 ETH</dd></div></dl>
-<details class="ca520da"><summary>Quote settings</summary><div class="c731bed"><label for="fee">Route fee (%)<select id="fee" aria-describedby="input-error"><option value="0.01">0.01%</option><option value="0.05">0.05%</option><option value="0.3" selected>0.30%</option><option value="1">1.00%</option></select></label><label for="slippage">Slippage (%)<input id="slippage" aria-describedby="input-error" type="number" min="0" max="50" step="0.1" value="0.5"></label><label class="ca77ed5" for="gas">Gas budget (ETH)<input id="gas" aria-describedby="input-error" type="number" min="0" max="10" step="0.00001" value="0.00015"></label></div><p class="c5f2daf">Enter your exchange rate and route settings. Gas stays separate from the token receive amount.</p></details>
-<p class="c7d4c15" id="input-error" role="status"></p><a class="c9be06a" href="dashboard/">Continue to swap <span class="c2370e1" aria-hidden="true">&#8594;</span></a><p class="ccc3b76">Review the executable route in your wallet before signing.</p>
-</article></div></div></section>
-<section id="swap-facts" aria-labelledby="swap-facts-title"><div class="cbe1420">
-<h2 id="swap-facts-title">Swap ETH: key facts</h2>
-<div class="ce32360"><table aria-labelledby="swap-facts-title"><thead>
-<tr><th scope="row">Network and pairs</th><td>Ethereum mainnet; this calculator covers ETH to USDC and ETH to USDT.</td></tr>
-<tr><th scope="row">Pool fees</th><td>Uniswap v3 tiers: 0.01%, 0.05%, 0.30% and 1% per pool; gas is separate. See <a href="https://developers.uniswap.org/docs/get-started/concepts/fees" rel="nofollow noopener" target="_blank">Uniswap fee documentation</a>.</td></tr>
-<tr><th scope="row">Network fee</th><td>Paid in ETH: gas used &times; effective gas price. For example, 150,000 gas at 1 gwei costs 0.00015 ETH. See <a href="https://ethereum.org/developers/docs/gas/" rel="nofollow noopener" target="_blank">Ethereum gas documentation</a>.</td></tr>
-<tr><th scope="row">Execution time</th><td>Ethereum uses 12-second slots; a same-network swap executes when included in a block. Inclusion depends on demand and the priority fee. See <a href="https://ethereum.org/developers/docs/consensus-mechanisms/pos/" rel="nofollow noopener" target="_blank">Ethereum consensus documentation</a>.</td></tr>
-<tr><th scope="row">What you need</th><td>An Ethereum wallet, ETH for the swap plus gas, and the receiving token's contract address to verify the asset.</td></tr>
-<tr><th scope="row">Token approval</th><td>Native ETH needs no ERC-20 allowance; WETH and other ERC-20 inputs may need an approval or permit.</td></tr>
-</thead></table></div>
-</div></section>
-<div class="cbe1420"><nav class="c760e9d" aria-label="ETH swap destinations"><span>Swap into<br>your preferred asset</span><a href="dashboard/"><img src="assets/tokens/eth.svg" width="28" height="28" alt=""><span class="c87f06e">Ethereum<small>Native asset</small></span></a><a href="dashboard/"><img src="assets/tokens/usdc.svg" width="28" height="28" alt=""><span class="c87f06e">USDC<small>Stablecoin</small></span></a><a href="dashboard/"><img src="assets/tokens/usdt.svg" width="28" height="28" alt=""><span class="c87f06e">USDT<small>Stablecoin</small></span></a><a href="dashboard/"><img src="assets/tokens/arb.svg" width="28" height="28" alt=""><span class="c87f06e">Arbitrum<small>ARB token</small></span></a><a href="dashboard/"><img src="assets/tokens/bnb.svg" width="28" height="28" alt=""><span class="c87f06e">BNB<small>BNB Chain</small></span></a><a href="dashboard/"><img src="assets/tokens/sol.svg" width="28" height="28" alt=""><span class="c87f06e">Solana<small>SOL token</small></span></a></nav></div>
-<section class="c9f2a0b" id="rates"><div class="cbe1420"><div class="cc4726c"><div><h2>ETH swap rates &amp; fees,<br>at every size.</h2><p>Compare how much arrives after the route fee. Change the exchange rate or quote settings above to update every row below.</p></div><span class="c571a0b">ETH &#8594; <span data-currency>USDC</span> &middot; <span id="table-fee">0.30%</span> route fee</span></div><div class="ce32360" tabindex="0" role="region" aria-label="ETH swap rate and fee comparison"><table><caption>Receive amounts in <span data-currency>USDC</span> &middot; <span id="table-rate">3,000</span> per ETH &middot; gas paid separately</caption><thead><tr><th scope="col">You pay</th><th scope="col">Before fee</th><th scope="col">Route fee</th><th scope="col">You receive</th><th scope="col">Minimum received</th></tr></thead><tbody><tr data-amount="0.1"><td>0.1 ETH</td><td class="cae79f2">300.00</td><td class="c419494">0.90</td><td class="cef8f22">299.10</td><td class="c4a1c82">297.605</td></tr><tr data-amount="0.5"><td>0.5 ETH</td><td class="cae79f2">1,500.00</td><td class="c419494">4.50</td><td class="cef8f22">1,495.50</td><td class="c4a1c82">1,488.023</td></tr><tr data-amount="1" class="c7b822b"><td>1 ETH</td><td class="cae79f2">3,000.00</td><td class="c419494">9.00</td><td class="cef8f22">2,991.00</td><td class="c4a1c82">2,976.045</td></tr><tr data-amount="5"><td>5 ETH</td><td class="cae79f2">15,000.00</td><td class="c419494">45.00</td><td class="cef8f22">14,955.00</td><td class="c4a1c82">14,880.225</td></tr><tr data-amount="10"><td>10 ETH</td><td class="cae79f2">30,000.00</td><td class="c419494">90.00</td><td class="cef8f22">29,910.00</td><td class="c4a1c82">29,760.450</td></tr></tbody></table></div><div class="c47ef03"><span>Receive amount = ETH &times; rate &times; (1 &minus; route fee).</span><span><strong id="table-gas">0.00015 ETH</strong> gas budget per swap.</span></div><div class="c52591f"><div><h3>Route fees follow the path</h3><p>Liquidity pools charge a percentage of the swap. A route through several pools can include multiple fees. Compare the final token amount.</p></div><div><h3>Gas is paid in ETH</h3><p>Ethereum gas cost equals gas used multiplied by the effective gas price. Keep that ETH in your wallet alongside the amount you swap.</p></div><div><h3>Minimum received sets the floor</h3><p>The slippage setting limits the price movement you accept. If the route falls below that minimum, the swap reverts; an included transaction still uses gas.</p></div></div></div></section>
-<section class="c9f2a0b c2e3873" id="how"><div class="cbe1420 c411ef1"><div><h2>How to swap ETH<br>from your wallet.</h2><p class="ce08ec4">Choose the token and receiving network first. The route, transaction fee and wallet confirmation follow from that choice.</p><a class="cff3a4b" href="dashboard/">Open the swap dashboard &#8599;</a></div><ol class="c57b67e"><li><span class="c81ec04" aria-hidden="true">01</span><div><h3>Choose your ETH pair</h3><p>Enter the ETH amount and choose USDC, USDT or another token. Match the receiving network to the place where you will use your funds.</p></div></li><li><span class="c81ec04" aria-hidden="true">02</span><div><h3>Review the full receive amount</h3><p>Check the exchange rate, price impact, route fees and minimum received together. Leave enough ETH in your wallet to cover gas.</p></div></li><li><span class="c81ec04" aria-hidden="true">03</span><div><h3>Confirm and track your swap</h3><p>Check the transaction in your wallet before signing. Once submitted, use its transaction hash to track inclusion and the tokens delivered.</p></div></li></ol></div></section>
-<section class="c9f2a0b" id="options"><div class="cbe1420"><h2>Swap ETH to stablecoins or other tokens.</h2><p class="cf4b3f2">The asset and the receiving network are two separate choices.</p><div class="ceb17e9"><article class="c0e17fd"><div class="cf635f9"><img src="assets/tokens/usdc.svg" width="28" height="28" alt="USDC" loading="lazy"><img src="assets/tokens/usdt.svg" width="28" height="28" alt="USDT" loading="lazy"></div><h3>ETH to USDC or USDT</h3><p>Move from ETH into a dollar-denominated stablecoin for payments, transfers or a different portfolio balance. Check the token contract and network, and compare the USDC or USDT amount delivered.</p><div class="cc0b477"><span>Dollar-denominated tokens</span><span>Same-network swap available</span></div><a href="dashboard/">Swap ETH to stablecoins <span aria-hidden="true">&#8599;</span></a></article><article class="c0e17fd"><div class="cf635f9"><img src="assets/tokens/arb.svg" width="28" height="28" alt="ARB" loading="lazy"><img src="assets/tokens/bnb.svg" width="28" height="28" alt="BNB" loading="lazy"><img src="assets/tokens/sol.svg" width="28" height="28" alt="SOL" loading="lazy"></div><h3>ETH to ARB, BNB or SOL</h3><p>Choose the token for the ecosystem you want to use. Receiving native BNB on BNB Chain or SOL on Solana involves a cross-chain route, with destination settlement added to the swap.</p><div class="cc0b477"><span>Check destination gas</span><span>Match the receiving address</span></div><a href="dashboard/">Explore ETH token swaps <span aria-hidden="true">&#8599;</span></a></article></div></div></section>
-<section class="c9f2a0b c0b6dca" id="safety"><div class="cbe1420 cf664d9"><div class="c79da3b"><h2>What to check<br>before an ETH swap.</h2><p>Your wallet signature authorizes the transaction. Check these four details before confirming.</p></div><ul class="c666717"><li><h3>The asset and its contract</h3><p>Match the token contract to the issuer's published address. A familiar ticker alone is not enough to identify a token.</p></li><li><h3>The receiving network</h3><p>Use an address supported by the destination chain. For an exchange deposit, match its supported network and token.</p></li><li><h3>The minimum received</h3><p>Read the slippage limit and price impact together. A large trade in a shallow pool can move the exchange rate.</p></li><li><h3>The approval and gas budget</h3><p>For ERC-20 tokens, inspect the spending allowance. Keep native ETH available for Ethereum transaction fees.</p></li></ul></div></section>
-<section class="c9f2a0b cd6db0c" id="faq"><div class="cbe1420 c9ec3db"><div class="c432822"><h2>Swap ETH:<br>your questions,<br>answered.</h2><p>Rates, fees, timing and the details that matter before you sign.</p></div><div class="cfebae6"><details><summary>How do I swap ETH for USDC?</summary><p>Choose ETH as the token to pay and USDC as the token to receive. Select the receiving network, enter your amount, review the route and minimum received, then confirm the transaction in your wallet. Keep ETH available for the network fee.</p></details><details><summary>What fees do I pay when I swap ETH?</summary><p>The total cost includes the route or liquidity-pool fee and the network gas fee. A route with several pools can charge a fee at each step. Price impact changes the exchange rate; slippage sets how much the execution price may move. Compare the final receive amount as well as the fee percentage.</p></details><details><summary>How long does an ETH swap take?</summary><p>A same-network swap completes after its transaction is included in a block. Ethereum has 12-second slots, while transaction inclusion depends on demand and the priority fee. Cross-chain swaps also require source-chain confirmations and destination-chain settlement.</p></details><details><summary>What is the difference between slippage and price impact?</summary><p>Price impact is the change your own trade causes in a liquidity pool. Slippage is the price movement between the quote and execution. At 0.5% slippage, a quoted receive amount of 2,991 USDC has a minimum received of 2,976.045 USDC. Network gas is paid separately.</p></details><details><summary>Can I swap ETH for USDT, ARB, BNB or SOL?</summary><p>Choose USDT for another dollar-denominated stablecoin, or select a token and its receiving network. ARB is a token, while Arbitrum is a network that also uses ETH for gas. Native BNB and SOL use BNB Chain and Solana, so an Ethereum-to-native-token route includes a cross-chain transfer.</p></details><details><summary>Do I need ETH left over for gas?</summary><p>Yes. On Ethereum, network fees are paid in ETH. Leave enough ETH for the swap transaction and any other wallet transactions you intend to make. The calculator shows the swap amount plus your gas budget as the total ETH needed.</p></details><details><summary>Does swapping ETH require a token approval?</summary><p>Paying with native ETH generally uses the swap transaction directly. Paying with WETH or another ERC-20 token may require an allowance or a permit for the swap contract. Review the spender and allowance amount before signing.</p></details><details><summary>How is the ETH swap calculator calculated?</summary><p>The calculator multiplies your ETH amount by the exchange rate you enter, then applies the route fee. Minimum received applies your slippage tolerance to that result. Gas is added to the ETH budget separately. The comparison table uses the same rate, fee and slippage settings for every swap size.</p></details></div></div></section>
-<section class="c55a560"><div class="cbe1420"><div class="c6e0027"><div><h2>Swap ETH with the details in view.</h2><p>Choose your token. Review your route. Confirm in your wallet.</p></div><a class="c9be06a" href="dashboard/">Open swap dashboard <span class="c2370e1" aria-hidden="true">&#8599;</span></a></div></div></section>
-</main><footer class="cb036f3"><div class="cbe1420"><div class="c2e4f41"><span class="c82129e">Swap ETH</span><nav aria-label="Footer"><a href="#rates">Rates &amp; fees</a><a href="#options">Swap pairs</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a href="dashboard/">Open app &#8599;</a></nav></div><div class="c9d3f0b"><span>ETH, stablecoins and token swaps.</span><time datetime="2026-10-09">Updated Oct 09, 2026</time><span>&copy; 2026 Swap ETH</span></div></div></footer>
-<script src="assets/swap.js" defer></script>
-</body>
-</html>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-cv" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 5 5 5-5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.4 3 8.4 7 10 4-1.6 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="5" ry="2.5"/><path d="M4 7v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V7"/><path d="M10 15.5c.6 1.2 2.6 2 5 2 2.8 0 5-1.1 5-2.5v-4c0-1.4-2.2-2.5-5-2.5"/><path d="M20 15v4c0 1.4-2.2 2.5-5 2.5s-5-1.1-5-2.5v-2"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/><path d="M12 14.5v2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s-6 6.4-6 10.5a6 6 0 0 0 12 0c0-4.1-6-10.5-6-10.5z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="7" rx="2"/><rect x="4" y="13" width="16" height="7" rx="2"/><path d="M8 7.5h.01M8 16.5h.01"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.5-2-3.4-2.3 1a7.6 7.6 0 0 0-1.7-1L15 2.5h-4l-.4 2.6c-.6.3-1.2.6-1.7 1l-2.3-1-2 3.4L4.6 11a7.8 7.8 0 0 0 0 2l-2 1.5 2 3.4 2.3-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.3 1 2-3.4z"/></symbol>
+</defs></svg>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="ETH Swap home"><img src="icon.svg" alt=""><span>ETH Swap</span></a>
+  <nav class="nlinks" aria-label="Primary">
+    <a href="#overview">ETH basics</a>
+    <a href="#compare">ETH vs tokens</a>
+    <a href="#how">How to swap</a>
+    <a href="#fees">Fees &amp; gas</a>
+    <a href="#security">Security</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <span class="spacer"></span>
+  <a class="chain" href="/dashboard/" style="text-decoration:none"><img src="assets/coin-eth.svg" alt=""><span>Ethereum</span><svg class="cv" aria-hidden="true"><use href="#i-cv"/></svg></a>
+  <a class="connect" href="/dashboard/" style="text-decoration:none">Connect wallet</a>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>ETH Swap</h1>
+
+    <section class="card" aria-label="ETH Swap">
+      <div class="tabs">
+        <button class="tab on" type="button">Swap</button>
+        <button class="tab" type="button">Status</button>
+        <span class="sp"></span>
+        <button class="ic gear" type="button" aria-label="Settings" data-toast="Settings are disabled in this demo."><svg aria-hidden="true"><use href="#i-gear"/></svg></button>
+      </div>
+
+      <div class="promo">
+        <div class="promo-txt">
+          <h2 class="promo-h">Swap ETH for USDC, USDT or any ERC-20</h2>
+          <p class="promo-sub">Trade on Ethereum from your own wallet. Gas is paid in ETH and you sign every transaction.</p>
+        </div>
+        <div class="promo-grid" aria-hidden="true">
+          <span class="pico"><img src="assets/coin-eth.svg" alt=""></span>
+          <span class="pico"><img src="assets/tether-usdt.svg" alt=""></span>
+          <span class="pico"><img src="assets/usd-coin-usdc.svg" alt=""></span>
+          <span class="pico"><img src="assets/ethereum-eth.svg" alt=""></span>
+        </div>
+      </div>
+
+      <div class="cta-wrap"><a class="cta" href="/dashboard/" style="display:flex;align-items:center;justify-content:center;text-decoration:none">Swap ETH</a></div>
+    </section>
+  </section>
+
+  <section class="learn" id="learn">
+    <p class="learn-h">Learn about ETH Swap</p>
+    <div class="lrow">
+      <details class="lcard" name="learn" id="overview"><summary><span>ETH basics</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>How ETH Swap works</h2>
+<h3>Trading on Ethereum from your wallet</h3>
+<p><strong>ETH Swap</strong> is a non-custodial interface for exchanging ETH for USDC, USDT and other ERC-20 tokens on Ethereum mainnet, and back again. You connect your own wallet, choose the two assets and review a quote before anything is signed.</p>
+<h3>ETH and ERC-20 tokens</h3>
+<p>ETH is the native coin of Ethereum and the only asset that pays for gas. Almost everything else you trade is an ERC-20 token. Native ETH needs no approval, while ERC-20 tokens do, and routers take care of converting ETH into whatever form a pool requires.</p></div></details>
+
+      <details class="lcard" name="learn" id="compare"><summary><span>ETH vs tokens</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>Selling ETH or selling a token</h2>
+<p>What you start with changes how many transactions the swap takes. Gas is always paid in ETH either way.</p>
+<div class="tbl"><table><caption>Swap from ETH vs swap from an ERC-20 token</caption><thead><tr><th scope="col"></th><th scope="col">From ETH</th><th scope="col">From an ERC-20 token</th></tr></thead><tbody><tr><th scope="row">Asset type</th><td>native coin</td><td>ERC-20 token</td></tr><tr><th scope="row">Approval</th><td>not needed</td><td>one-time allowance per token</td></tr><tr><th scope="row">Gas paid in</th><td>ETH</td><td>ETH</td></tr><tr><th scope="row">Cost</th><td>gas + pool or aggregator fee</td><td>gas + pool or aggregator fee, plus approval gas</td></tr></tbody></table></div>
+<h3>In practice</h3>
+<p>Swapping ETH for USDC is a single transaction. Swapping USDT or USDC back into ETH takes an approval first if the router has no allowance yet.</p></div></details>
+
+      <details class="lcard" name="learn" id="how"><summary><span>How to swap</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>How to swap ETH</h2>
+<h3>Route and quote</h3>
+<p>The interface searches Ethereum DEX pools and splits the trade across routes when that gives a better result. It then shows the expected output, price impact and slippage tolerance, and you confirm before signing.</p>
+<h3>Step by step</h3>
+<ol>
+<li>Connect your wallet and check that it is on Ethereum mainnet.</li>
+<li>Set ETH as the sell token and pick the token you want, such as USDC or USDT.</li>
+<li>Enter an amount and review the quote, route and estimated gas.</li>
+<li>Approve the sell token if it is an ERC-20; this step is skipped for native ETH.</li>
+<li>Sign the swap; it settles on-chain and the new token lands in your wallet.</li>
+</ol>
+<p>If gas looks high, you can wait and re-quote later, since the fee follows network demand.</p></div></details>
+
+      <details class="lcard" name="learn" id="fees"><summary><span>Fees &amp; gas</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>What an ETH swap costs</h2>
+<h3>Gas</h3>
+<p>Each approval and each swap is a separate Ethereum transaction paid in ETH, and the price of gas moves with network demand. See how <a href="https://ethereum.org/en/developers/docs/gas/" target="_blank" rel="nofollow noopener">gas works</a>.</p>
+<h3>Trading cost</h3>
+<p>A swap also carries price impact, your slippage tolerance and any pool or aggregator fee, all reflected in the quoted output. Larger trades in thinner pools usually move the price more.</p>
+<h3>Keep ETH for gas</h3>
+<p>Do not swap your entire ETH balance. Leave enough in the wallet to pay for this swap and for the next approval or transfer you plan to make.</p></div></details>
+
+      <details class="lcard" name="learn" id="security"><summary><span>Security</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody"><h2>Staying safe</h2>
+<h3>Non-custodial by design</h3>
+<p>You connect your own wallet and sign every transaction yourself. A swap interface routes and quotes; it never holds your funds or keys.</p>
+<h3>Before you sign</h3>
+<ul>
+<li>Verify the token contract address; copycat tokens and fake stablecoins are common.</li>
+<li>Approve only what you need and revoke old <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" target="_blank" rel="nofollow noopener">ERC-20</a> allowances you no longer use.</li>
+<li>Check the quote, price impact and slippage before confirming.</li>
+<li>Large swaps on a public mempool can be targeted by sandwich bots, so keep slippage tight.</li>
+<li>Smart contracts can hold bugs, so risk is never zero.</li>
+</ul></div></details>
+
+      <details class="lcard" name="learn" id="faq"><summary><span>FAQ</span><span class="chev" aria-hidden="true"></span></summary><div class="lbody lfaq"><h2>ETH Swap FAQ</h2>
+<h3>What is ETH Swap used for?</h3>
+<p>ETH Swap is for exchanging ETH for USDC, USDT or any ERC-20 token on Ethereum, and for swapping those tokens back into ETH. You connect your own wallet, check a DEX-routed quote and sign the transaction yourself.</p>
+<h3>Do I need ETH to swap USDC or USDT?</h3>
+<p>Yes. Gas on Ethereum is paid in ETH no matter which token you are selling. Keep some ETH in the wallet so you can sign the approval and the swap.</p>
+<h3>Why does an ERC-20 swap ask for an approval?</h3>
+<p>ERC-20 tokens need a one-time allowance before a router can move them for you. Native ETH needs no approval. The approval is its own transaction and costs gas.</p>
+<h3>What is slippage when swapping ETH?</h3>
+<p>Slippage is the difference between the quoted price and the price your swap executes at. If the price moves more than your tolerance before the transaction confirms, the swap reverts and you pay gas for the failed attempt.</p>
+<h3>Why does the gas fee change between swaps?</h3>
+<p>Gas on Ethereum depends on how busy the network is when your transaction is sent. The wallet shows an estimate before you sign, and it can be higher for multi-step routes than for a simple one.</p>
+<h3>Does the site hold my ETH during a swap?</h3>
+<p>No. The swap runs from your wallet through on-chain contracts, and the interface never holds your funds or private keys. You can reject any request in your wallet.</p></div></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot"><span>&copy; 2026 ETH Swap</span><span class="sep">&middot;</span><a href="legal.html#privacy">Privacy</a><span class="sep">&middot;</span><a href="legal.html#terms">Terms</a><span class="sep">&middot;</span><span>Non-custodial &middot; Ethereum</span></div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var tabs=[].slice.call(document.querySelectorAll('.tab'));
+tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===t);});});});
+
+var toast=document.getElementById('toast'),tT;
+function notify(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){toast.classList.remove('show');},3000);}
+[].slice.call(document.querySelectorAll('[data-toast]')).forEach(function(b){b.addEventListener('click',function(){notify(b.getAttribute('data-toast'));});});
+
+function openHash(){var id=location.hash.slice(1);if(!id)return;var c=document.getElementById(id);if(c&&c.matches&&c.matches('.lcard[name="learn"]'))c.open=true;}
+window.addEventListener('hashchange',openHash);openHash();
+[].slice.call(document.querySelectorAll('.nlinks a')).forEach(function(a){a.addEventListener('click',function(){var c=document.getElementById(a.getAttribute('href').slice(1));if(c&&c.matches('.lcard'))c.open=true;});});
+})();
+</script>
+</body></html>
